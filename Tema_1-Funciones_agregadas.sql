@@ -26,3 +26,4 @@ GROUP BY pago.idpasajero;
 SELECT pasajero.idpasajero AVG(monto + impuesto) AS "Promedio de pagos" 
 FROM pasajero NATURAL JOIN pago 
 GROUP BY pago.idpasajero; 
+  
