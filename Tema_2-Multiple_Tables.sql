@@ -24,12 +24,12 @@ INNER JOIN curso AS c ON p.id = c.PROFESOR_id ORDER by c.nombre;
 -- SELECT c.nombre,  (c.cupo - COUNT(i.CURSO_codigo)) AS 'cupo disponible'
 -- FROM curso AS c INNER JOIN inscripcion AS i 
 -- GROUP BY c.nombre ;
-SELECT c.nombre,  (c.cupo - COUNT(*)) AS 'cupo disponible'
+SELECT c.nombre,  (c.cupo - COUNT(*)) AS 'Cupo disponible'
 FROM curso AS c INNER JOIN inscripcion AS i 
 GROUP BY c.nombre ;
 
 -- Cursos cuyo cupo disponible sea menor a 10
-SELECT c.nombre, COUNT(*) AS 'cupo disponible'
+SELECT c.nombre, COUNT(*) AS 'Cupo disponible'
 FROM curso AS c INNER JOIN inscripcion AS i 
 GROUP BY c.nombre HAVING COUNT(*) < 10;
  
